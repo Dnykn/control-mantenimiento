@@ -3,12 +3,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
- apiKey: "AIzaSyDSez8osmzOqCeppq3CnsXdByGR2yt6G7Y",
- authDomain: "control-mantenimiento-app.firebaseapp.com",
- projectId: "control-mantenimiento-app",
- storageBucket: "control-mantenimiento-app.firebasestorage.app",
- messagingSenderId: "965100785397",
- appId: "1:965100785397:web:1e34a523c2b7dc17687fbc"
+ apiKey: "Tu clave de firebase",
+ authDomain: "",
+ projectId: "",
+ storageBucket: "",
+ messagingSenderId: "",
+ appId: ""
 };
 
 
