@@ -36,13 +36,15 @@ Contraseña:
 
 ---
 ## 📸 Capturas de Pantalla
-
-![tabla principal](<img/Captura de pantalla 2025-11-05 080946.png>)
 informacion de cada maquina
-![formulario](<Captura de pantalla 2025-11-05 084449.png>)
+![tabla principal](<img/Captura de pantalla 2025-11-05 080946.png>)
+
 formulario de accion para los tecnicos
-![login](<Captura de pantalla 2025-11-05 084628.png>)
+![formulario](<Captura de pantalla 2025-11-05 084449.png>)
+
 Inicio de sesion para los tecnicos
+![login](<Captura de pantalla 2025-11-05 084628.png>)
+
 
 ---
 ## 📫 Contacto
