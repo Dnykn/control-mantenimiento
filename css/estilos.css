@@ -1,0 +1,263 @@
+/* --- 1. TEMA BASE Y TIPOGRAFÍA --- */
+body {
+  font-family: 'Nunito', sans-serif; 
+  background-color: #1a202c; /* Azul Noche */
+  color: #edf2f7;           /* Blanco Hueso */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Títulos más definidos */
+}
+
+/* --- 2. TARJETAS Y CONTENEDORES --- */
+.card {
+  background-color: #2d3748; /* Gris Industrial */
+  border: none;              /* Quitamos los bordes, la sombra hará el trabajo */
+  border-radius: 0.5rem;
+  /* Una sombra sutil para dar profundidad */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  background-color: transparent; /* Hacemos el header transparente */
+  border-bottom: 1px solid #4a5568; /* Línea divisoria sutil */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-title, .card-header h5 {
+  color: #edf2f7; /* Aseguramos que los títulos dentro de las tarjetas sean bien visibles */
+  opacity: 0.9; /* Le damos una opacidad ligeramente menor que el texto principal para crear jerarquía */
+}
+/* --- 3. TABLA PROFESIONAL --- */
+.table {
+  --bs-table-bg: transparent; /* La tabla hereda el color de la tarjeta */
+  --bs-table-color: #edf2f7;
+  --bs-table-border-color: #4a5568;
+  --bs-table-striped-bg: #354152; /* Un poco más claro para las filas alternas */
+  --bs-table-hover-bg: #4a5568; 
+  --bs-table-hover-color: #fff;
+}
+
+.table thead th {
+  background-color: #1a202c; /* La cabecera usa el color de fondo base */
+  border-color: #4a5568;
+  color: #edf2f7; /* Un color más tenue para los encabezados */
+  text-transform: uppercase; /* MAYÚSCULAS para un look más técnico */
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* --- 4. FORMULARIOS CLAROS Y FUNCIONALES --- */
+.form-label {
+  color: #a0aec0; /* Etiquetas en gris claro */
+  font-weight: 600;
+}
+
+.form-control, .form-select {
+  background-color: #1a202c; /* Fondo como el del body */
+  border: 1px solid #4a5568;
+  color: #edf2f7;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem; /* Hacemos los inputs un poco más grandes */
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #1a202c;
+  color: #edf2f7;
+  border-color: #3182ce; /* Borde de acento al seleccionar */
+  box-shadow: 0 0 0 0.25rem rgba(49, 130, 206, 0.25);
+}
+
+/* Placeholder (texto de ayuda) de los inputs */
+.form-control::placeholder {
+  color: #718096;
+}
+
+/* --- 5. BOTÓN DE ACCIÓN (NUESTRO AZUL DE SEGURIDAD) --- */
+.btn-primary {
+  background-color: #3182ce;
+  border-color: #3182ce;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #2b6cb0; /* Un azul un poco más oscuro al pasar el ratón */
+  border-color: #2b6cb0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(49, 130, 206, 0.2);
+}
+
+/* Botón secundario para acciones como "Volver" */
+.btn-secondary {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+}
+
+/* El botón de 'Ver Detalles' usará el estilo secundario para no competir */
+.btn-info {
+  background-color: #e1ff00;
+  border-color: #4a5568;
+  font-weight: 600;
+}
+
+.btn-info:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+}
+
+/* --- 6. NAVBAR PERSONALIZADA --- */
+.navbar {
+  background-color: #2d3748; /* El mismo color de las tarjetas */
+  border-bottom: 1px solid #4a5568;
+  transition: padding 180ms ease, background-color 180ms ease;
+  padding: 0.75rem 1rem;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #edf2f7;
+  font-weight: 700;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+/* Usuario (derecha): avatar y nombre */
+.navbar .rounded-circle {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+#navbar-user-name {
+  margin-left: 0.45rem;
+  font-size: 0.95rem;
+  color: #edf2f7;
+  white-space: nowrap;
+}
+
+/* --- 7. AJUSTES FINALES DE LEGIBILIDAD --- */
+
+/* Forzamos el color del texto para el cuerpo de las tarjetas
+   y los items de las listas para que sean siempre legibles. */
+.card-body,
+.list-group-item {
+  color: #edf2f7; /* Usamos nuestro blanco hueso principal */
+}
+
+/* Y nos aseguramos de que el fondo del item de lista sea transparente
+   para que se integre con el diseño de la tarjeta. */
+.list-group-item {
+  background-color: transparent;
+}
+
+/* --- 7. ESTILOS DEL MENÚ DE USUARIO --- */
+.dropdown-toggle::after {
+  /* Oculta la flechita por defecto de Bootstrap para un look más limpio */
+  display: none; 
+}
+
+#navbar-user-name {
+  /* Hacemos el nombre un poco más sutil que el título principal */
+  font-weight: 600;
+  color: #a0aec0;
+  transition: color 0.2s ease-in-out;
+}
+
+.dropdown:hover #navbar-user-name {
+  color: #fff; /* Al pasar el ratón, el nombre se ilumina */
+}
+
+/* --- Responsive: convertir filas de tabla en "tarjetas" en pantallas pequeñas --- */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td, .table th {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    background: #1a202c;
+    margin-bottom: 0.9rem;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.28rem 0;
+    border: none;
+    white-space: normal;
+  }
+  .table td::before {
+    content: attr(data-label);
+    color: #6b7280; /* tono neutro para la etiqueta */
+    font-weight: 700;
+    margin-right: 0.6rem;
+    flex: 0 0 auto;
+  }
+  /* Ajuste especial para la celda de acciones: apilar botones y hacerlos táctiles */
+  .table td[data-label="Acciones"] {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .table td[data-label="Acciones"] .btn {
+    flex: 1 1 auto;
+    min-width: 110px;
+  }
+  /* Badges y texto más compactos en móvil */
+  .badge {
+    font-size: 0.78rem;
+    padding: 0.28rem 0.45rem;
+  }
+}
+
+/* Ajustes intermedios (tabletas) */
+@media (max-width: 992px) {
+  .navbar { padding: 0.6rem 0.8rem; }
+  .navbar-brand { font-size: 1rem; max-width: 55%; }
+  .navbar .rounded-circle { width: 34px; height: 34px; }
+  #navbar-user-name { font-size: 0.92rem; }
+}
+
+/* Móvil: optimizar espacio táctil y visual */
+@media (max-width: 768px) {
+  .navbar { padding: 0.5rem 0.6rem; }
+  .navbar-brand { font-size: 0.98rem; max-width: 50%; }
+  .navbar .rounded-circle { width: 30px; height: 30px; }
+  #navbar-user-name { font-size: 0.9rem; margin-left: 0.35rem; }
+  /* Hacer que el dropdown no machaque el layout */
+  .dropdown-toggle { gap: 0.35rem; }
+}
+
+/* Pantallas muy pequeñas: prioridad a la marca y avatar (ocultamos el texto del usuario) */
+@media (max-width: 420px) {
+  .navbar { padding: 0.4rem 0.5rem; }
+  .navbar-brand { font-size: 0.92rem; max-width: 70%; }
+  .navbar .rounded-circle { width: 28px; height: 28px; }
+  #navbar-user-name { display: none; } /* deja el avatar y el dropdown; ahorra espacio */
+  .dropdown-toggle { padding: 0; }
+}
+
+/* Si quieres que la navbar colapse (hamburger) en móviles, cambia la clase
+   <nav class="navbar"> por <nav class="navbar navbar-expand-sm"> en index.html/maquina.html */
